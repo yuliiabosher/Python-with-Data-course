@@ -97,6 +97,10 @@ def to_do_list():
 
     def display_menu():
         while True:
+            print("\nPress 'w' to overwrite task(s)")
+            print("Press 'd' to delete a task")
+            print("Press 'a' to append a new task to a file")
+            print("Press 'e' to exit the program")
             choice = input("\nChoose 'w', 'd', a' or 'e' ")
             if choice == "w":
                 add_new_tasks()
@@ -118,10 +122,6 @@ def to_do_list():
                 print(i)
             if rows == ["\n"]:
                 print("\nThe file is empty\n")
-            print("\nPress 'w' to overwrite task(s)")
-            print("Press 'd' to delete a task")
-            print("Press 'e' to exit the program")
-            print("Press 'a' to append a new task to a file")
             read_file.close()
 
     display_menu()
